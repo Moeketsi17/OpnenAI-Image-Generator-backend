@@ -17,7 +17,7 @@ const generateImage = async (req, res) => {
             size: imageSize,
         });
 
-        const imageUrl = 'https://openai-image-generator-api-o0a5.onrender.com';
+        const imageUrl = response.data.data[0].url;
 
         res.status(200).json({
             success: true,
